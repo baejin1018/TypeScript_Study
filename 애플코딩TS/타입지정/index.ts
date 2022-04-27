@@ -47,16 +47,29 @@
 
 // // type changeType = TypeChanger<Car>
 
-function cleaning(x: (number | string)[]) {
-  const cleaned: number[] = [];
-  x.map((n) => {
-    if (typeof n === "string") {
-      cleaned.push(Number(n));
-    } else {
-      cleaned.push(n);
-    }
-  });
-  return cleaned;
-}
+// function cleaning(x: (number | string)[]) {
+//   const cleaned: number[] = [];
+//   x.map((n) => {
+//     if (typeof n === "string") {
+//       cleaned.push(Number(n));
+//     } else {
+//       cleaned.push(n);
+//     }
+//   });
+//   return cleaned;
+// }
 
-console.log(cleaning(["1", 2, "3"]));
+// console.log(cleaning(["1", 2, "3"]));
+
+// type PositionX = { x: number };
+// type PositionY = { y: number };
+// type NewType = PositionX & PositionY;
+
+// let position: NewType = { x: 10, y: 10 };
+// console.log(typeof position);
+
+type MyType = {
+  color?: string;
+  size: number;
+  readonly position: number[];
+};
