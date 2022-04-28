@@ -14,7 +14,6 @@ function f(x:number :number|string){
         array[0]= x;
     }
 }
-f(123);
 ```
 
 ## Assertion (타입 덮어쓰기)
@@ -26,10 +25,9 @@ assertion 문법의 용도
 - 무슨 타입이 들어올지 100% 확실할 때 쓴다
 
 ```ts
-function f(x:number :number|string){
-
-    let array : number[] = [];
-    array[0]= x as number; //as 왼쪽에 있는 x의 타입을 number로 덮는다
+function f(x: number | string) {
+  let array: number[] = [];
+  array[0] = x as number; //as 왼쪽에 있는 x의 타입을 number로 덮는다
 }
 ```
 

@@ -73,3 +73,15 @@ type MyType = {
   size: number;
   readonly position: number[];
 };
+
+type Member = {
+  name: string;
+  age: number;
+  plusOne: (x: number) => number;
+  changeName: () => void;
+};
+
+const cutZero = (x: string): string => {
+  const result = x.replace(/^0/, "");
+  return result;
+};
