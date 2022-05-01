@@ -81,7 +81,31 @@ type Member = {
   changeName: () => void;
 };
 
-const cutZero = (x: string): string => {
-  const result = x.replace(/^0/, "");
-  return result;
+class Car {
+  model: string;
+  price: number;
+  constructor(name: string, pri: number) {
+    this.model = name;
+    this.price = pri;
+  }
+
+  tax(): number {
+    return this.price * 0.1;
+  }
+}
+
+type Member2 = {
+  name: string;
+  age: string;
 };
+const jo: Member2 = { name: "kim", age: "123" };
+
+interface st {
+  name: string;
+}
+
+interface tc extends st {
+  age: number;
+}
+const 학생: st = { name: "kim" };
+const 선생님 : tc = {name:'kim',age:20}

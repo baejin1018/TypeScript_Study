@@ -16,6 +16,31 @@ function f(x:number :number|string){
 }
 ```
 
+### && 연산자로 null&undefined 타입 체크
+
+```ts
+function 함수(a: string | undefined) {
+  if (a && typeof a === "string") {
+  }
+}
+```
+
+### in 키워드로 object narrowing
+
+in : `속성명 in 오브젝트자료`  
+속성명이 오브젝트 자료에 있나 없나 검사
+
+```ts
+type Fish = { swim: string };
+type Bird = { fly: string };
+
+function 함수(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    //Fish 타입인지 검사,swim이 animal 안에 들어 있나
+  }
+}
+```
+
 ## Assertion (타입 덮어쓰기)
 
 as 사용  
