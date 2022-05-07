@@ -43,3 +43,14 @@ const Profile = (props: { name: string }): JSX.Element => {
   return <div>프로필 {props.name}</div>;
 };
 ```
+
+## useState 타입지정
+자신이 넣은 초기값을 바탕으로 자동 타입지정함
+```ts
+const [user,setUser] = useState('kim') //string타입
+const [user,setUser] = useState(['kim']) //string[]타입
+const [user,setUser] = useState<string|number>('kim') //string|number 타입 가지게 됨
+```
+
+## type assertion
+type assertion 할때 as 또는 <>를 쓰는데 리액트에서는 <>를 오해할수 있어 as 만 사용한다

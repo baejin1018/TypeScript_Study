@@ -41,6 +41,14 @@ function 함수(animal: Fish | Bird) {
 }
 ```
 
+### instanceof 연산자로 objectnarrowing 가능
+instanceof는 new로 생성된 object들의 부모를 검사할수 있다 그것을 이용해 narrowing   
+```ts
+let 날짜 new Date();
+if(날짜 instanceof Date){
+  
+}
+```
 ## Assertion (타입 덮어쓰기)
 
 as 사용  

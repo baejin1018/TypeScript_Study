@@ -109,3 +109,19 @@ interface tc extends st {
 }
 const 학생: st = { name: "kim" };
 const 선생님 : tc = {name:'kim',age:20}
+
+
+type Fish = {swim:string}
+type Bird = {fly:string}
+
+function 함수(animal :Fish|Bird){
+  if('swim' in animal){
+
+  }
+}
+var 자료 = {
+  name: "kim", //type이 'kim'이 됨
+} as const;
+
+function 내함수(a: "kim") {}
+내함수(자료.name);
