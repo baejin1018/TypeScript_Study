@@ -9,3 +9,4 @@ type TypeChanger<MyType, T> = {
 };
 
 type changeType = TypeChanger<Bus, number>;
+

@@ -13,8 +13,8 @@ const a: Age<string>;
 ```ts
 type FirstItem<T> = T extends any[] ? T[0] : any;
 
-let age1: FirstItem<string[]>;
-let age2: FirstItem<number[]>;
+let age1: FirstItem<string[]>; //agr 1 타입 :string
+let age2: FirstItem<number[]>;//age2 타입 : number
 ```
 
 # infer
